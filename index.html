@@ -5,29 +5,6 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Control de Gastos</title>
-<script src="https://cdn.jsdelivr.net/npm/chart.js">function eliminarUltimoGasto() {
-      gastos.pop();
-      actualizarTabla();
-    }
 
-    function reiniciarGastos() {
-      gastos.length = 0;
-      actualizarTabla();
-      document.getElementById("grafica").getContext("2d").clearRect(0, 0, 800, 400);
-      document.getElementById("diagnostico").textContent = "";
-      document.getElementById("recomendaciones").textContent = "";
-      document.getElementById("advertenciaPresupuesto").textContent = "";
-      document.getElementById("totalGastos").textContent = "";
-    }
 
-    function actualizarTabla() {
-      const cuerpo = document.getElementById("tablaGastos");
-      cuerpo.innerHTML = "";
-      gastos.forEach(g => {
-        const fila = `<tr><td>${g.tipo}</td><td>$${g.monto.toFixed(2)}</td></tr>`;
-        cuerpo.innerHTML += fila;
-      });
-    }
-</script>
-</body>
-</html>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script><script defer="True" src="script.js"></script><link href="styles.css" rel="stylesheet"/></head></html>
